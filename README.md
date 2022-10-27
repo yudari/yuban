@@ -2,7 +2,7 @@
 Yuban adalah sebuah aplikasi berbasis web yang dimana user dapat mencatat progress atau hal-hal yang ingin dilakukan ke dalam sebuah board. 
 Yuban dibangun dengan framework React JS dan data ToDo disimpan didalam localStorage dan aplikasi ini mengimplementasikan fitur drag and drop menggunakan library DND agar mempermudah user untuk merapikan tugas yang ingin dilakukan kedalam sebuah board
 ## Gunakan aplikasi :
-Kamu dapat menggunakan aplikasi ini dengan mengakses pada link berikut : [yuban.vercel.app](https://yuban.vercel.app/)
+Aplikasi ini dapat diakses pada link berikut : [yuban.vercel.app](https://yuban.vercel.app/)
 ## Fungsi :
 ### Halaman Board Yuban:
 ![yuban-1](https://user-images.githubusercontent.com/43470163/198349703-0d1eee32-f6cc-4921-aa4a-347c129a6bdc.png)
