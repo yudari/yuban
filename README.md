@@ -11,9 +11,9 @@ Kamu dapat menggunakan aplikasi ini dengan mengakses pada link berikut : [yuban.
 ### Membuat ToDo Baru
 ![yuban-3](https://user-images.githubusercontent.com/43470163/198350000-9188a595-d786-4ba9-b8e0-9504216a8ff8.png)
 ## Fitur
-- [ ] *Dapat mengedit dan membuat project ToDo Baru*
-- [ ] *Dapat membuat, mengedit dan menghapus ToDo*
-- [ ] *Dapat drag and drop todo berdasarkan progress yang telah diselesaikan*
+- [x] *Dapat mengedit dan membuat project ToDo Baru*
+- [x] *Dapat membuat, mengedit dan menghapus ToDo*
+- [x] *Dapat drag and drop todo berdasarkan progress yang telah diselesaikan*
 ## Dependencies
 - React
 - react-beautiful-dnd
