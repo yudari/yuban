@@ -1,0 +1,344 @@
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 340; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  /* HSL color mode */
+
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 75%);
+
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color));
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+.App {
+  display: flex;
+}
+
+.event-bar {
+  flex-shrink: 1;
+  min-width: 220px;
+  text-align: center;
+  width: 300px;
+  height: 100vh;
+  border-right: 2px solid #ededed;
+}
+
+.task-box {
+  flex: 1;
+  min-width: 1070px;
+  background-color: #fefefe;
+}
+
+.add-button {
+  width: 80%;
+  height: 45px;
+  font-size: 1.3em;
+  line-height: 45px;
+  background-color: var(--first-color-lighter);
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  outline: none;
+}
+
+.add-button:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+/* modal button */
+.services__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.services__modal-content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  min-width: 300px;
+}
+
+.services__modal-services {
+  row-gap: 1rem;
+}
+
+.services__modal-service {
+  display: flex;
+}
+
+.services__modal-title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1-5);
+}
+
+.services__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+.services__modal-icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}
+
+/* Active Modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.inputs__form {
+  margin-bottom: var(--mb-1-5);
+  width: 100%;
+}
+
+.event__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.event__label {
+  font-size: var(--h3-font-size);
+  color: var(--first-color-second);
+  display: inline-block;
+  margin-bottom: var(--mb-0-5);
+}
+
+.event__input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--first-color);
+  padding: 6px 0px;
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+}
+.event__input::placeholder {
+  font-size: var(--small-font-size);
+  color: var(--first-color-lighter);
+}
+.event__input:focus {
+  border-bottom: 2px solid var(--first-color-second);
+}
+
+.button__container {
+  display: flex;
+
+  flex-direction: row-reverse;
+}
+.form__inputs .button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  text-decoration: none;
+}
+.form__inputs .button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.form__inputs .button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+}
+
+.form__inputs .button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.form__input__project {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 0px 22px;
+  margin-bottom: 20px;
+}
+
+.input__project {
+  border: none;
+  outline: none;
+  padding: 8px 6px;
+  color: var(--first-color);
+}
+.input__project::placeholder {
+  color: var(--first-color-lighter);
+}
+
+.input__project:focus {
+  border-bottom: 1px solid var(--first-color-lighter);
+}
+
+.button-container-project {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container-project .btn {
+  padding: 6px 14px;
+  border: none;
+  background-color: var(--first-color-second);
+  border-radius: 4px;
+  color: #fff;
+}
+.button-container-project .btn:hover {
+  background-color: var(--first-color-lighter);
+}
+
+.button-remove-container {
+  display: flex;
+  column-gap: 20px;
+  margin-left: 20px;
+  transform: translateY(-100vh);
+  transition: 0.3s transform;
+  position: absolute;
+}
+
+.button-remove-container .btn {
+  padding: 5px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.button-remove-container .btn:hover {
+  cursor: pointer;
+}
+.button-remove-container .btn-cancel {
+  background-color: var(--first-color-lighter);
+  color: var(--first-color);
+}
+.button-remove-container .btn-remove {
+  background-color: var(--first-color-second);
+}
+
+.active {
+  transform: translateY(0vh);
+  position: static;
+}
+
+.edit-button {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-left: 35px;
+  background: none;
+  border: 1px solid #4040a1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.edit-button:hover {
+  color: #fff;
+  background-color: #4040a1;
+  transition: 0.3s;
+}
+
+.btn-edit-project {
+  width: 100%;
+  padding: 10px;
+}
+/* form input modal event */
+
+.footer-app {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  color: var(--first-color);
+}

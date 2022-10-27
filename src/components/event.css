@@ -1,0 +1,42 @@
+.event-bar-title {
+  font-size: 2.5em;
+  padding: 25px 0;
+  font-weight: 600;
+  letter-spacing: 8px;
+  color: hsl(var(--hue-color), 69%, 61%);
+}
+
+.event-container {
+  height: 700px;
+  padding: 0 30px;
+  overflow: auto;
+}
+
+.event {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  max-width: 230px;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.event:hover {
+  color: #fff;
+  background-color: hsl(var(--hue-color), 69%, 61%);
+  transition: 0.5s;
+}
+
+.selected-event {
+  color: #fff;
+  background-color: hsl(var(--hue-color), 69%, 61%);
+}
+
+.over-hide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
